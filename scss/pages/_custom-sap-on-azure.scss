@@ -1,0 +1,341 @@
+#sap-on-azure{
+    overflow-x: hidden;
+
+    .sap-info{
+        padding-top: 110px;
+        padding-bottom: 110px;
+        background-color: #f9faff;
+
+        &__details{
+
+            &__quote{
+                display: flex;
+                justify-content: center;
+
+                img{
+                    width: 60px;
+                }
+
+            }
+
+            p{
+                font-size: 24px;
+                line-height: 40px;
+                text-align: center;
+                color: #000000;
+
+                @media #{$mobile_device}{
+                    width: 100%;
+                    text-align: left;
+                    line-height: 28px;
+                    font-size: 15px;
+                }
+
+                @media #{$tablet_device}{
+                    font-size: 18px;
+                    line-height: 26px;
+                }
+            }
+        }
+
+    }
+
+    .why-cadmils-sap-services{
+
+        @media #{$mobile_device}{
+            padding: 90px 10px;
+        }
+
+        @media #{$tablet_device}{
+            padding: 90px 10px;
+        }
+
+        .wrapper{
+            display: flex;
+
+            
+            .left-column{
+                width: 50%;
+                padding-left: 10vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                @media #{$mobile_device}{
+                    width: 100%;
+                    padding-left: 0;
+                }
+
+                @media #{$tablet_device}{
+                    width: 100%;
+                    padding-left: 0;
+                }
+
+                &__header{
+                    font-size: 30px;
+                    font-weight: 700;
+                    color: $cadmil-green;
+                    margin-bottom: 30px;
+                }
+
+                &__list{
+
+                    li{
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #000000;
+                        margin-bottom: 15px;
+                        position: relative;
+                        padding-left: 20px;
+        
+                        &:before{
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            background-color: $cadmil-purple;
+                            position: absolute;
+                            border-radius: 50%;
+                            left: 0px;
+                            top: 6px;
+                        }
+                    }
+                }
+            }
+            
+            .right-column{
+                width: 50%;
+
+                @media #{$mobile_device}{
+                    display: none;
+                }
+
+                @media #{$tablet_device}{
+                    display: none;
+                }
+
+
+
+                .image{
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-image: url(../img/sap-page/cadmils-sap-services.jpg);
+                    padding-top: 80vh;
+                    clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+        }
+    }
+
+    .benefits{
+        margin-bottom: 100px;
+        background-color: #f9faff;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 5px;
+        padding: 100px;
+
+        @media #{$mobile_device}{
+            padding: 100px 20px;
+        }
+    
+        .header{
+            margin-bottom: 50px;
+    
+            h3{
+            color: $cadmil-green;
+            font-size: 30px;
+            font-weight: 700;
+            }
+        }
+    
+        .body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 60px;
+
+            @media #{$mobile_device}{
+                display: block;
+            }
+    
+            &__section{
+
+                @media #{$mobile_device}{
+                    margin-bottom: 30px;
+                }
+    
+                &:nth-child(4){
+                    grid-column: 1/3;
+                    grid-row: 2/3;
+                    width: 45%;
+                    justify-self: center;
+
+                    @media #{$mobile_device}{
+                        width: 100%;
+                    }
+                }
+    
+                &:nth-child(5){
+                    grid-column: 2/4;
+                    grid-row: 2/3;
+                    width: 45%;
+                    justify-self: center;
+
+                    @media #{$mobile_device}{
+                        width: 100%;
+                    }
+                }
+    
+                &__img-wrapper{
+                    height: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    img{
+                        width: 60px;
+    
+                        &.envision-image{
+                            width: 120px;
+                        }
+    
+                        &.access-image{
+                            width: 120px;
+                        }
+    
+                        &.migrate-image{
+                            width: 100px;
+                        }
+                    }
+    
+                    
+                }
+    
+                h4{
+                    color: $cadmil-purple;
+                    text-align: center;
+                }
+    
+                ul{
+    
+                    li{
+                        position: relative;
+                        margin-bottom: 10px;
+                        font-size: 15px;
+                        text-align: center;
+            
+                        &:before{
+                            width: 5px;
+                            height: 5px;
+                            background-color: #5cc3d2;
+                            position: absolute;
+                            border-radius: 50%;
+                            left: -15px;
+                            top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sap-migration-approach{
+        margin-bottom: 100px;
+
+        .header{
+            margin-bottom: 30px;
+    
+            h3{
+            color: $cadmil-green;
+            font-size: 30px;
+            font-weight: 700;
+            }
+        }
+
+        .wrapper{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            width: 90%;
+            margin: 0 auto;
+            background-color: #f9faff;
+            padding: 3px;
+
+            @media #{$mobile_device}{
+                display: block;
+            }
+
+            @media #{$tablet_device}{
+                display: block;
+            }
+
+            .section{
+
+                @media #{$mobile_device}{
+                    margin-bottom: 80px;
+                }
+
+                @media #{$tablet_device}{
+                    margin-bottom: 80px;
+                }
+
+                &__header{
+                    background-color: $cadmil-purple;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 10px;
+                }
+
+                &__body{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-gap: 10px;
+                    &.one-child{
+                        grid-template-columns: auto;
+                    }
+
+                    @media #{$mobile_device}{
+                        display: block;
+                    }
+
+                    @media #{$tablet_device}{
+                        display: block;
+                    }
+
+                    &__col{
+
+                        h5{
+                            background-color: $cadmil-green;
+                            color: #ffffff;
+                            padding: 10px;
+                            text-align: center;
+                        }
+
+                        ul{
+                            padding-left: 15px;
+
+                            li{
+                                position: relative;
+                                margin-bottom: 10px;
+                                font-size: 15px;
+                    
+                                &:before{
+                                    content: '';
+                                    width: 5px;
+                                    height: 5px;
+                                    background-color: #5cc3d2;
+                                    position: absolute;
+                                    border-radius: 50%;
+                                    left: -15px;
+                                    top: 10px;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

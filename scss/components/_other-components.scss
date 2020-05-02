@@ -1,0 +1,17 @@
+.bar{
+    height: 6px;
+    width: 90px;
+    background: #a6a9e3;
+    margin: 20px auto;
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        left: 45%;
+        top: -3px;
+        height: 12px;
+        width: 10px;
+        background: $cadmil-purple;
+    }
+}

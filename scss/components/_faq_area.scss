@@ -1,0 +1,239 @@
+.faq_area{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .faq_thumb{
+        @include border-radius(10px);
+        overflow: hidden;
+
+        @media #{$mobile_device} {
+            margin-bottom: 30px;
+        }
+
+        @media #{$tablet_device} {
+            margin-bottom: 30px;
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+    .faq_ask{
+        h3{
+            font-size: 32px;
+        font-weight: 600;
+        line-height: 38px;
+        color: #000000;
+        position: relative;
+        z-index: 0;
+        margin-bottom: 30px;
+        
+        @media #{$mobile_device} {
+            font-size: 26px;
+            line-height: 36px;
+        }
+        @media #{$tablet_device} {
+            font-size: 26px;
+            line-height: 36px;
+        }
+        br{
+            @media #{$mobile_device} {
+                display: none;
+            }
+        }
+        }
+        #faq{
+            .card {
+                position: relative;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                min-width: 0;
+                word-wrap: break-word;
+                background-color: #fff;
+                background-clip: border-box;
+                border: none;
+                border-radius: .25rem;
+                border-bottom: 1px solid #E8E8E8;
+            }
+           .card .card-header {
+                background-color: transparent;
+                padding: 4px 14px;
+                border: none;
+            }
+            button {
+                font-size: 15px;
+                color: #001D38 !important;
+                font-weight: 300 !important;
+                span{
+                    @media #{$mobile_device} {
+                        display: none;
+                    }
+                }
+            }
+            .card .card-header {
+                background-color: transparent;
+                padding: 4px 30px;
+            }
+            // h5 button.btn.btn-link::after {
+            //     position: absolute;
+            //     content: "\e648";
+            //     top: 9px;
+            //     left: -24px;
+            //     height: auto;
+            //     font-family: 'themify';
+            //     color: #0f2137;
+            //     font-size: 14px;
+            // }
+            .card .card-body {
+
+                font-size: 15px;
+                line-height: 28px;
+                color: #727272;
+                padding: 10px 30px 32px;
+                font-weight: 400;
+                line-height: 28px;
+
+                li{
+                    list-style-type: disc;
+                    margin-bottom: 10px;
+                }
+            
+            }
+            .btn-link.focus, .btn-link:focus {
+                text-decoration: none;
+                border-color: transparent;
+                box-shadow: none;
+            }
+        }
+    }
+
+
+}
+
+#faq{
+    button{
+        font-size: 16px;
+        color: #0f2137;
+        font-weight: 500;
+        font-weight: 500;
+        @media #{$mobile_device} {
+            font-size: 14px;
+        }
+    }
+    .card{
+        margin-bottom: 15px;
+        border-radius: 0;
+        border-radius: 0 !important;
+        margin-bottom: 30px;
+        .card-header {
+            background-color: transparent;
+            padding: 4px 14px;
+            @media #{$mobile_device} {
+                padding: 4px 0;
+            }
+        }
+        .card-body{
+            font-size: 16px;
+            line-height: 28px;
+            color: #888888;
+            padding: 10px 30px 32px;
+        }
+        .collapse {
+            border-bottom: 1px solid #d7dbe3;
+            &.show{
+                // background: #fff;
+                // -webkit-box-shadow: 0px 30px 50px 0 rgba(77, 193, 220, 0.1);
+                // box-shadow: 0px 30px 50px 0 rgba(77, 193, 220, 0.1);
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    h5{
+        position: relative;
+        z-index: 1;
+        // button.btn.btn-link{
+        //     &:after{
+        //         position: absolute;
+        //         content: "\e648";
+        //         top: 9px;
+        //         right: 12px;
+        //         height: auto;
+        //         font-family: 'themify';
+        //         color: #0f2137;
+        //         font-size: 14px;
+        //         @media #{$mobile_device} {
+        //             right: 10px;
+        //         }
+        //     }
+        // }
+        // button.btn.btn-link.collapsed{
+        //     &:after{
+        //         content: "\e64b";
+        //         color: #0f2137;
+        //         font-size: 14px;
+        //     }
+        // }
+        button.btn.btn-link{
+            &:after{
+                position: absolute;
+                content: "\e648";
+                top: 9px;
+                right: 12px;
+                height: auto;
+                font-family: 'themify';
+                color: #0f2137;
+                font-size: 14px;
+                left: -24px;
+                @media #{$mobile_device} {
+                    right: 10px;
+                }
+            }
+        }
+        button.btn.btn-link.collapsed{
+            &:after{
+                content: "\e64b";
+                color: #0f2137;
+                font-size: 14px;
+            }
+        }
+        button{
+            i{
+                height: 36px;
+                width: 36px;
+                font-size: 14px;
+                display: inline-block;
+                text-align: center;
+                line-height: 36px;
+                border-radius: 50%;
+                margin-right: 20px;
+                color: #fff;
+                @include transition(.3s);
+                @media #{$mobile_device} {
+                    display: none;
+                }
+            }
+            &.btn.btn-link.collapsed{
+                i{
+                    background: #f4f7f9;
+                    color: #0f2137;
+                    @media #{$mobile_device} {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+    
+    .btn-link:hover {
+        color: #182028;
+        text-decoration: none;
+    }
+    .btn{
+        text-align: left !important;
+    }
+}

@@ -1,0 +1,36 @@
+.Information_area{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 162px 0;
+    @media #{$mobile_device} {
+        padding: 100px 0;
+    }
+    .info_text{
+        h3{
+            font-size: 25px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 30px;
+            @media #{$mobile_device} {
+                font-size: 20px;
+            }
+        }
+        a.boxed-btn3{
+            padding: 14px 40px;
+        }
+    }
+}
+
+.info-bg-home{
+    background-image: url(../img/home-page/info-contact-home.jpg);
+}
+
+.info-bg-contact{
+    background-image: url(../img/about-page/info-contact-about.jpg);
+    background-position: bottom;
+}
+
+.info-bg-services{
+    background-image: url(../img/services-page/contact-services.jpg);
+}
