@@ -6,7 +6,6 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "watch": "./node_modules/.bin/webpack --watch --config webpack.config.js"
   },
   "dependencies": {
     "@babel/core": "^7.9.6",
