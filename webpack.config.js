@@ -1,7 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const mode = process.env.NODE_ENV || 'development';
+const isDevelopment = mode === 'development';
 
 module.exports = {
     mode: mode,
@@ -11,6 +13,10 @@ module.exports = {
         path: path.resolve(__dirname, "dist")
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: isDevelopment ? "[name].css" : "[chunkhash]-[name].css",
+            chunkFilename: isDevelopment ? "[id].css" : "[chunkhash]-[id].css"
+        }),
         new HtmlWebpackPlugin({
             template: 'index.html',
         }),
@@ -18,10 +24,6 @@ module.exports = {
     ],
     module: {
         rules: [
-            // {
-            //     test: /\.html$/i,
-            //     loader: 'html-loader',
-            // },
             {
                 test: /\.m?js$/,
                 exclude: /(node_modules)/,
@@ -44,12 +46,8 @@ module.exports = {
 
             {
                 test: /\.(sa|sc|c)ss$/,
-                include: [
-                    path.resolve(__dirname, 'node_modules'),
-                    path.resolve(__dirname, 'path/to/imported/file/dir')
-                ],
                 use: [
-                    'style-loader',
+                    isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ],
