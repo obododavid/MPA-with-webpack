@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 const mode = process.env.NODE_ENV || 'development';
 const isDevelopment = mode === 'development';
 
@@ -20,7 +21,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'index.html',
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
     ],
     module: {
         rules: [
@@ -43,6 +49,10 @@ module.exports = {
                 use: [
                     {
                         loader: 'file-loader',
+                        options: {
+                            name: "[name].[hash].[ext]",
+                            outputPath: "imgs"
+                        }
                     },
                 ],
             },
@@ -54,6 +64,10 @@ module.exports = {
                     'sass-loader',
                 ],
             },
+            {
+                test: /\.exec\.js$/,
+                use: ['script-loader']
+            }
         ]
     },
     devServer: {
