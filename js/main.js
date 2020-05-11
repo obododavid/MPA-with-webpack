@@ -19,11 +19,12 @@ import "waypoints/lib/jquery.waypoints.js";
 import "./wow.min.js"
 import "./jquery.slicknav.min.js"
 import "./jquery.validate.min.js"
+import "./contact.js"
 // import "./bootstrap.min.js"
 // import "./owl.carousel.min.js"
 // import "./waypoints.min.js"
 // import "./jquery.counterup.min.js"
-// import "script-loader!owl.carousel/dist/owl.carousel.min.js";
+// import "script-loader!owl.carousel/dist/owl.carousel.min.js";      
 
 
 

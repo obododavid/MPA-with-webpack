@@ -26,6 +26,22 @@ module.exports = {
             template: 'about.html',
             filename: 'about.html'
         }),
+        new HtmlWebpackPlugin({
+            template: 'services.html',
+            filename: 'services.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: 'contact.html',
+            filename: 'contact.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: 'cloud_services.html',
+            filename: 'cloud_services.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: 'sap_on_azure.html',
+            filename: 'sap_on_azure.html'
+        }),
         new CleanWebpackPlugin(),
         new webpack.ProvidePlugin({
             $: 'jquery',
