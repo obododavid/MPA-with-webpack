@@ -50,7 +50,7 @@ module.exports = {
             //     loader: 'url-loader?limit=8000'
             // },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
                     {
                         loader: 'file-loader',
@@ -60,6 +60,23 @@ module.exports = {
                         }
                     },
                 ],
+            },
+            // {
+            //     test: /\.html$/i,
+            //     use: [
+            //         {
+            //             loader: 'file-loader',
+            //             options: {
+            //                 name: "[name].[ext]",
+            //                 // outputPath: "/"
+            //             }
+            //         },
+            //     ],
+            //     // exclude: path.resolve(__dirname, '/index.html')
+            // },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
             },
             {
                 test: /\.(sa|sc|c)ss$/,
