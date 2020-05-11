@@ -1,6 +1,6 @@
 
 
-// import "../css/bootstrap.min.css"
+import "../css/bootstrap.min.css"
 // import "../css/owl.carousel.min.css"
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import "../css/font-awesome.min.css"
@@ -8,7 +8,7 @@
 // import "../css/flaticon.css"
 // import "../css/animate.css"
 // import "../css/slicknav.css"
-// import "../css/style.css"
+import "../css/style.css"
 
 import "./vendor/modernizr-3.5.0.min.js"
 import "./vendor/jquery-1.12.4.min.js"
