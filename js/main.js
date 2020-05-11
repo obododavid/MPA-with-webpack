@@ -26,7 +26,6 @@ import "./jquery.validate.min.js"
 // import "script-loader!owl.carousel/dist/owl.carousel.min.js";
 
 
-// import '../about.html'
 
 
 
@@ -270,3 +269,4 @@ backdrop.addEventListener('click', handleHideMobileNavbar);
 //----------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------
+// import '../about.html'

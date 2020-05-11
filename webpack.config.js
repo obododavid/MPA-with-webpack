@@ -20,6 +20,11 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: 'index.html',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: 'about.html',
+            filename: 'about.html'
         }),
         new CleanWebpackPlugin(),
         new webpack.ProvidePlugin({
@@ -68,11 +73,10 @@ module.exports = {
             //             loader: 'file-loader',
             //             options: {
             //                 name: "[name].[ext]",
-            //                 // outputPath: "/"
             //             }
             //         },
             //     ],
-            //     // exclude: path.resolve(__dirname, '/index.html')
+            //     exclude: path.resolve(__dirname, 'index.html')
             // },
             {
                 test: /\.html$/i,
