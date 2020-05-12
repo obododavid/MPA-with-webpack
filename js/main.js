@@ -1,27 +1,27 @@
 
 
 import "../css/bootstrap.min.css"
-// import "../css/owl.carousel.min.css"
+import "../css/owl.carousel.min.css"
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import "../css/font-awesome.min.css"
 // import "../css/themify-icons.css"
 // import "../css/flaticon.css"
 // import "../css/animate.css"
 // import "../css/slicknav.css"
-import "../css/style.css"
+import "../css/style.css" // slick nav worked with this alone
 
-import "./vendor/modernizr-3.5.0.min.js"
+// import "./vendor/modernizr-3.5.0.min.js"
 import "./vendor/jquery-1.12.4.min.js"
-import "jquery"
-import "./popper.min.js"
-import "bootstrap";
-import "waypoints/lib/jquery.waypoints.js";
-import "./wow.min.js"
-import "./jquery.slicknav.min.js"
-import "./jquery.validate.min.js"
-import "./contact.js"
+import "./owl.carousel.min.js"
+// import "jquery"
+// import "./popper.min.js"
+// import "bootstrap";
+// import "waypoints/lib/jquery.waypoints.js";
+// import "./wow.min.js"
+// import "./jquery.slicknav.min.js"
+// import "./jquery.validate.min.js"
+// import "./contact.js"
 // import "./bootstrap.min.js"
-// import "./owl.carousel.min.js"
 // import "./waypoints.min.js"
 // import "./jquery.counterup.min.js"
 // import "script-loader!owl.carousel/dist/owl.carousel.min.js";      
@@ -52,50 +52,50 @@ import "./contact.js"
     // window.history.scrollRestoration = 'manual';
 
     // mobile_menu
-    var menu = $('ul#navigation');
-    if (menu.length) {
-      menu.slicknav({
-        prependTo: ".mobile_menu",
-        closedSymbol: '+',
-        openedSymbol: '-'
-      });
-    };
+    // var menu = $('ul#navigation');
+    // if (menu.length) {
+    //   menu.slicknav({
+    //     prependTo: ".mobile_menu",
+    //     closedSymbol: '+',
+    //     openedSymbol: '-'
+    //   });
+    // };
 
 
     // review-active
-    // $('.slider_active').owlCarousel({
-    //   loop: true,
-    //   margin: 0,
-    //   items: 1,
-    //   autoplay: 300,
-    //   navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
-    //   nav: true,
-    //   dots: false,
-    //   autoplayHoverPause: false,
-    //   autoplaySpeed: 600,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       nav: false,
-    //     },
-    //     767: {
-    //       items: 1,
-    //       nav: true,
-    //     },
-    //     992: {
-    //       items: 1,
-    //       nav: true
-    //     },
-    //     1200: {
-    //       items: 1,
-    //       nav: true
-    //     },
-    //     1600: {
-    //       items: 1,
-    //       nav: true
-    //     }
-    //   }
-    // });
+    $('.slider_active').owlCarousel({
+      loop: true,
+      margin: 0,
+      items: 1,
+      autoplay: 300,
+      navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
+      nav: true,
+      dots: false,
+      autoplayHoverPause: false,
+      autoplaySpeed: 600,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false,
+        },
+        767: {
+          items: 1,
+          nav: true,
+        },
+        992: {
+          items: 1,
+          nav: true
+        },
+        1200: {
+          items: 1,
+          nav: true
+        },
+        1600: {
+          items: 1,
+          nav: true
+        }
+      }
+    });
 
     // filter items on button click
     $('.portfolio-menu').on('click', 'button', function () {
