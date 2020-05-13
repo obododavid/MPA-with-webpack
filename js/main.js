@@ -11,23 +11,23 @@ import "../css/owl.carousel.min.css"
 import "../css/style.css" // slick nav worked with this alone
 
 // import "./vendor/modernizr-3.5.0.min.js"
-import "./vendor/jquery-1.12.4.min.js"
+// import "./vendor/jquery-1.12.4.min.js"
+import "jquery"
 import "./owl.carousel.min.js"
-// import "jquery"
 // import "./popper.min.js"
 // import "bootstrap";
-// import "waypoints/lib/jquery.waypoints.js";
 // import "./wow.min.js"
+import "waypoints/lib/jquery.waypoints.js";
+import counterUp from "counterup2";
 // import "./jquery.slicknav.min.js"
 // import "./jquery.validate.min.js"
 // import "./contact.js"
 // import "./bootstrap.min.js"
-// import "./waypoints.min.js"
+// import "./waypoints.min.js";
+// import "waypoints"
 // import "./jquery.counterup.min.js"
 // import "script-loader!owl.carousel/dist/owl.carousel.min.js";      
-
-
-
+// require('waypoints/lib/noframework.waypoints.js')
 
 
 (function ($) {
@@ -44,25 +44,7 @@ import "./owl.carousel.min.js"
     }
   });
 
-
-
-
-
   $(window).on('load', function () {
-    // window.history.scrollRestoration = 'manual';
-
-    // mobile_menu
-    // var menu = $('ul#navigation');
-    // if (menu.length) {
-    //   menu.slicknav({
-    //     prependTo: ".mobile_menu",
-    //     closedSymbol: '+',
-    //     openedSymbol: '-'
-    //   });
-    // };
-
-
-    // review-active
     $('.slider_active').owlCarousel({
       loop: true,
       margin: 0,
@@ -97,13 +79,11 @@ import "./owl.carousel.min.js"
       }
     });
 
-    // filter items on button click
     $('.portfolio-menu').on('click', 'button', function () {
       var filterValue = $(this).attr('data-filter');
       $grid.isotope({ filter: filterValue });
     });
 
-    //for menu active class
     $('.portfolio-menu button').on('click', function (event) {
       $(this).siblings('.active').removeClass('active');
       $(this).addClass('active');
@@ -113,114 +93,10 @@ import "./owl.carousel.min.js"
     // wow js
     // new WOW().init();
 
-    // counter 
-    // $('.counter').counterUp({
-    //   delay: 10,
-    //   time: 10000
-    // });
-
-    //brand-active
-    // $('.brand-active').owlCarousel({
-    //   loop: true,
-    //   margin: 30,
-    //   items: 1,
-    //   autoplay: true,
-    //   nav: false,
-    //   dots: false,
-    //   autoplayHoverPause: true,
-    //   autoplaySpeed: 800,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       nav: false
-
-    //     },
-    //     767: {
-    //       items: 4
-    //     },
-    //     992: {
-    //       items: 7
-    //     }
-    //   }
-    // });
-
-    // blog-dtails-page
-
-    //project-active
-    // $('.project-active').owlCarousel({
-    //   loop: true,
-    //   margin: 30,
-    //   items: 1,
-    //   // autoplay:true,
-    //   navText: ['<i class="Flaticon flaticon-left-arrow"></i>', '<i class="Flaticon flaticon-right-arrow"></i>'],
-    //   nav: true,
-    //   dots: false,
-    //   // autoplayHoverPause: true,
-    //   // autoplaySpeed: 800,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       nav: false
-
-    //     },
-    //     767: {
-    //       items: 1,
-    //       nav: false
-    //     },
-    //     992: {
-    //       items: 2,
-    //       nav: false
-    //     },
-    //     1200: {
-    //       items: 1,
-    //     },
-    //     1501: {
-    //       items: 2,
-    //     }
-    //   }
-    // });
-
     if (document.getElementById('default-select')) {
       $('select').niceSelect();
     }
-
-    //about-pro-active
-    // $('.details_active').owlCarousel({
-    //   loop: true,
-    //   margin: 0,
-    //   items: 1,
-    //   // autoplay:true,
-    //   navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
-    //   nav: true,
-    //   dots: false,
-    //   // autoplayHoverPause: true,
-    //   // autoplaySpeed: 800,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       nav: false
-
-    //     },
-    //     767: {
-    //       items: 1,
-    //       nav: false
-    //     },
-    //     992: {
-    //       items: 1,
-    //       nav: false
-    //     },
-    //     1200: {
-    //       items: 1,
-    //     }
-    //   }
-    // });
-
   });
-
-
-
-
-
 
   // Search Toggle
   $("#search_input_box").hide();
@@ -240,6 +116,21 @@ import "./owl.carousel.min.js"
 
 })(jQuery);
 
+
+
+document.addEventListener('DOMContentLoaded', function (event) {
+  const elements = document.querySelectorAll('.counter')
+  elements.forEach(el => {
+    new Waypoint({
+      element: el,
+      handler: function () {
+        counterUp(el)
+        this.destroy()
+      },
+      offset: 'bottom-in-view',
+    })
+  })
+})
 
 
 //----------------------------------------------------------------------------------------
