@@ -10,19 +10,19 @@ import "../css/themify-icons.css"
 // import "../css/slicknav.css"
 import "../css/style.css" // slick nav worked with this alone
 
-// import "./vendor/modernizr-3.5.0.min.js"
+import "./vendor/modernizr-3.5.0.min.js"
 // import "./vendor/jquery-1.12.4.min.js"
 import "jquery"
+import "./popper.min.js"
+import "./bootstrap.min.js"
+// import "bootstrap";
 import "./owl.carousel.min.js"
-// import "./popper.min.js"
-import "bootstrap";
 // import "./wow.min.js"
 import "waypoints/lib/jquery.waypoints.js";
 import counterUp from "counterup2";
 // import "./jquery.slicknav.min.js"
 // import "./jquery.validate.min.js"
 // import "./contact.js"
-// import "./bootstrap.min.js"
 // import "./waypoints.min.js";
 // import "waypoints"
 // import "./jquery.counterup.min.js"
