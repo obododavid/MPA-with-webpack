@@ -13,7 +13,7 @@ const loader = document.querySelector('.loader-backdrop');
 const successMessage = document.querySelector('.form-submission-success');
 const errorMessage = document.querySelector('.form-submission-error');
 
-button.classList.add('btn-disabled')
+
 
 const handleRequestSuccess = (data) => {
     successMessage.classList.add('show');
@@ -94,6 +94,8 @@ const handleOnSubmit = (e) => {
         'Content-Type': 'application/json'
     })
 
+    console.log(data)
+
     const request = new Request(form.action, {
         method: form.method,
         mode: 'no-cors',
@@ -123,6 +125,10 @@ const handleOnSubmit = (e) => {
 
 }
 
-
-button.addEventListener('click', handleOnSubmit)
-form.addEventListener('keyup', handleOnValidate)
+if (button) {
+    button.classList.add('btn-disabled')
+    button.addEventListener('click', handleOnSubmit)
+}
+if (form) {
+    form.addEventListener('keyup', handleOnValidate)
+}
