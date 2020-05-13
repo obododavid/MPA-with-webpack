@@ -4,7 +4,7 @@ import "../css/bootstrap.min.css"
 import "../css/owl.carousel.min.css"
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import "../css/font-awesome.min.css"
-// import "../css/themify-icons.css"
+import "../css/themify-icons.css"
 // import "../css/flaticon.css"
 // import "../css/animate.css"
 // import "../css/slicknav.css"
@@ -15,7 +15,7 @@ import "../css/style.css" // slick nav worked with this alone
 import "jquery"
 import "./owl.carousel.min.js"
 // import "./popper.min.js"
-// import "bootstrap";
+import "bootstrap";
 // import "./wow.min.js"
 import "waypoints/lib/jquery.waypoints.js";
 import counterUp from "counterup2";
