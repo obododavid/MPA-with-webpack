@@ -1,35 +1,18 @@
 
-
 import "../css/bootstrap.min.css"
 import "../css/owl.carousel.min.css"
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import "../css/font-awesome.min.css"
 import "../css/themify-icons.css"
-// import "../css/flaticon.css"
-// import "../css/animate.css"
-// import "../css/slicknav.css"
 import "../css/style.css" // slick nav worked with this alone
 
 import "./vendor/modernizr-3.5.0.min.js"
-// import "./vendor/jquery-1.12.4.min.js"
 import "jquery"
 import "./popper.min.js"
 import "./bootstrap.min.js"
-// import "bootstrap";
 import "./owl.carousel.min.js"
-// import "./wow.min.js"
 import "waypoints/lib/jquery.waypoints.js";
 import counterUp from "counterup2";
 import "regenerator-runtime/runtime.js";
 import "./contact.js"
-
-// import "./jquery.slicknav.min.js"
-// import "./jquery.validate.min.js"
-// import "./waypoints.min.js";
-// import "waypoints"
-// import "./jquery.counterup.min.js"
-// import "script-loader!owl.carousel/dist/owl.carousel.min.js";      
-// require('waypoints/lib/noframework.waypoints.js')
 
 
 (function ($) {
@@ -92,9 +75,6 @@ import "./contact.js"
       event.preventDefault();
     });
 
-    // wow js
-    // new WOW().init();
-
     if (document.getElementById('default-select')) {
       $('select').niceSelect();
     }
@@ -119,9 +99,7 @@ import "./contact.js"
 })(jQuery);
 
 
-
 document.addEventListener('DOMContentLoaded', function (event) {
-  const button = document.querySelector('.button-contactForm');
   const elements = document.querySelectorAll('.counter')
   elements.forEach(el => {
     new Waypoint({
@@ -153,9 +131,6 @@ var handleHideMobileNavbar = function () {
   backdrop.style.transform = 'translateX(100vw)';
 };
 
-// var handleOnClick = function (e) {
-//   console.log(e.target)
-// }
 hamburger.addEventListener('click', handleShowMobileNavbar);
 cancel.addEventListener('click', handleHideMobileNavbar);
 backdrop.addEventListener('click', handleHideMobileNavbar);
@@ -164,4 +139,3 @@ backdrop.addEventListener('click', handleHideMobileNavbar);
 //----------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------
-// import '../about.html'
