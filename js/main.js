@@ -20,6 +20,7 @@ import "./owl.carousel.min.js"
 // import "./wow.min.js"
 import "waypoints/lib/jquery.waypoints.js";
 import counterUp from "counterup2";
+import "regenerator-runtime/runtime.js";
 import "./contact.js"
 
 // import "./jquery.slicknav.min.js"
@@ -121,7 +122,6 @@ import "./contact.js"
 
 document.addEventListener('DOMContentLoaded', function (event) {
   const button = document.querySelector('.button-contactForm');
-  console.log(button)
   const elements = document.querySelectorAll('.counter')
   elements.forEach(el => {
     new Waypoint({

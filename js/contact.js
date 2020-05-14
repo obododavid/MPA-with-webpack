@@ -110,7 +110,9 @@ const handleOnSubmit = (e) => {
 
     async function makeRequest() {
         try {
+            console.log('here')
             let response = await fetch(request);
+            console.log('response')
             let data = await response.json();
             if (data.error) return handleRequestError(data)
             return handleRequestSuccess(data)
