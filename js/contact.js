@@ -94,8 +94,6 @@ const handleOnSubmit = (e) => {
         'Content-Type': 'application/json'
     })
 
-    console.log(data)
-
     const request = new Request(form.action, {
         method: form.method,
         mode: 'no-cors',
@@ -103,20 +101,10 @@ const handleOnSubmit = (e) => {
         body: JSON.stringify(data)
     })
 
-    // fetch(request)
-    //     .then(res => res.json())
-    //     .then(data => handleRequestSuccess(data))
-    //     .catch(error => handleRequestError(error))
-
     async function makeRequest() {
         try {
-            console.log('here')
             let response = await fetch(request);
-            console.log('response')
             let data = await response.json();
-            if (data.error) return handleRequestError(data)
-            return handleRequestSuccess(data)
-
         }
         catch (err) {
             handleRequestError(err)
